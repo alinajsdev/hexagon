@@ -1,19 +1,19 @@
 import "./App.css";
-import { hexagon } from "./hexData";
 
 
 function App() {
+  const count = 200;
+  const countArray = Array.from({ length: count }, (_, index) => index + 1); 
   return (
     <div class="honeycomb">
-
-    {hexagon.map((el, index) => (
+    {countArray.map((el, index) => (
       <div class="ibws-fix">
-        <div class="hexagon" style={{background : el.text ? '#092F53' : ""}}>
-          <div  class="hexagontent">{el.text}</div>
+        <div class="hexagon">
+          <div  class="hexagontent">{index}</div>
         </div>
-        <div class="hexagon"  style={{background : el.title ? '#092F53' : ""}}>
-          <div class="hexagontent">{el.title}</div>
-        </div>
+        <div class="hexagon"  >
+          <div class="hexagontent"></div>
+        </div>  
       </div>
     ))}
   </div>

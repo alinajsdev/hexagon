@@ -4,9 +4,11 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   font-family: Merriweather, Georgia, serif;
 }
+
 body {
   overflow: hidden;
   color: hsl(0, 0%, 10%);
@@ -16,15 +18,17 @@ body {
 .hexagon {
   position: relative;
   display: inline-block;
-  margin: 0.5px 17px;
+  margin: 0.5px 2.5vw; /* 17px в процентах от ширины вьюпорта */
   background-color: #000000;
 }
+
 .hexagon,
 .hexagon::before,
 .hexagon::after {
-  width: 67px;
-  height: 116px;
+  width: 9.15vw; /* 67px в процентах от ширины вьюпорта */
+  height: 16vw; /* 116px в процентах от высоты вьюпорта */
 }
+
 .hexagon::before {
   background-color: inherit;
   content: "";
@@ -32,6 +36,7 @@ body {
   left: 0;
   transform: rotate(-60deg);
 }
+
 .hexagon::after {
   background-color: inherit;
   content: "";
@@ -39,31 +44,31 @@ body {
   left: 0;
   transform: rotate(60deg);
 }
+
 .hexagon:nth-child(even) {
-  top: 59px;
+  top: 8.2vw; /* 59px в процентах от высоты вьюпорта */
 }
 
-.hexanone:nth-child(even) {
-  top: 59px;
-}
 .hexagontent {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 140%;
-  font-size: 1.4rem;
+  font-size: 1.4vw; /* 1.4rem в процентах от ширины вьюпорта */
   line-height: 1.2;
   z-index: 100;
   color: aliceblue;
 }
+
 .ibws-fix {
   font-size: 0;
 }
+
 .honeycomb {
-  height: 115vh;
+  height: 150vh;
   position: absolute;
-  top: -70px;
+  top: -180px;
   left: -90px;
   bottom: 0;
   right: 0;
@@ -73,7 +78,7 @@ body {
   overflow: hidden;
 }
 
-@media (max-width : 1000px) {
+@media (max-width: 1000px) {
   .honeycomb {
     height: 115vh;
     position: absolute;
