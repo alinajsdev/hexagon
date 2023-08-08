@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { hexagon } from "./hexData";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div class="honeycomb">
+
+    {hexagon.map((el, index) => (
+      <div class="ibws-fix">
+        <div class="hexagon" style={{background : el.text ? '#092F53' : ""}}>
+          <div  class="hexagontent">{el.text}</div>
+        </div>
+        <div class="hexagon"  style={{background : el.title ? '#092F53' : ""}}>
+          <div class="hexagontent">{el.title}</div>
+        </div>
+      </div>
+    ))}
+  </div>
   );
 }
 
