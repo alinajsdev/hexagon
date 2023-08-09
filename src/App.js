@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import AboutUs from "./AboutUs";
-import "./App.css";
-import GidroGel from "./GidroGel";
 import RoboBarista from "./RoboBarista";
-import Slot from "./Slot";
 import SmartCards from "./SmartCards";
+import GidroGel from "./GidroGel";
+import AboutUs from "./AboutUs";
 import Vector from "./vector";
+import Slot from "./Slot";
 import NFC from "./NFC";
+
+import "./App.css";
 
 function App() {
   const [state, setState] = useState(0);

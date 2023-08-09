@@ -34,7 +34,7 @@ body {
   height: 150.789px;
   transition: all 1s;
 }
-.nfc{
+.nfc {
   position: absolute;
   left: 40%;
   right: 45%;
@@ -42,8 +42,8 @@ body {
   transition: 1s;
 }
 
-@media (max-width : 600px) {
-  .nfc{
+@media (max-width: 600px) {
+  .nfc {
     position: absolute;
     left: 17%;
     right: 20%;
@@ -76,4 +76,3 @@ body {
     overflow: hidden;
   }
 }
-
