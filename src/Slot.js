@@ -1,11 +1,11 @@
 import React from "react";
 
-const Slot = () => {
+const Slot = ({media}) => {
   return (
     <>
       <svg
-        width="194"
-        height="150"
+      width={media ? '150' : '194'} 
+      height={media ? "110" : "150"}
         viewBox="0 0 264 208"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -10,6 +10,7 @@ import NFC from "./NFC";
 
 function App() {
   const [state, setState] = useState(0);
+  const [media, setMedia] = useState(false);
   const count = 10;
   const countArray = Array.from({ length: count }, (_, index) => index + 1);
 
@@ -20,19 +21,19 @@ function App() {
     setTimeout(() => {
       setState(2);
     }, 5000);
+
+    if (window.innerWidth < 600) {
+      return setMedia(!media);
+    }
   }, []);
-  console.log(state);
+
   return (
     <div id={"vector"}>
       <div
+        className="nfc"
         style={{
-          position: "absolute",
           top: state === 0 && state === 2 ? "60%" : "50%",
-          left: "40%",
-          right: "45%",
-          bottom: "50%",
           display: state === 1 ? "block" : "none",
-          transition: "1s",
         }}
       >
         <NFC />
@@ -41,166 +42,173 @@ function App() {
         <div className="odd">
           {countArray.map((el, index) => (
             <div className="vector">
-              <Vector />
+              <Vector media={media} />
             </div>
           ))}
         </div>
         <div className="even">
           {countArray.map((el, index) => (
             <div className="vector">
-              <Vector />
+              <Vector media={media} />
             </div>
           ))}
         </div>
-        <div className="odd" style={{ marginTop: "-76px" }}>
+        <div className="odd">
           {countArray.map((el, index) => (
             <div className="vector">
-              <Vector />
+              <Vector media={media} />
             </div>
           ))}
         </div>
-        <div className="even" style={{ marginTop: "-80px" }}>
+        <div className="even">
           {countArray.map((el, index) => (
             <div className="vector">
-              <Vector />
+              <Vector media={media} />
             </div>
           ))}
         </div>
-        <div className="odd" style={{ marginTop: "-76px" }}>
-          {countArray.map((el, index) => (
-            <div className="vector">
-              {index === 5 && state === 2 ? (
-                <div style={{ cursor: "pointer" }}>
-                  <AboutUs />
-                </div>
-              ) : (
-                <Vector />
-              )}
-            </div>
-          ))}
-        </div>
-        <div className="even" style={{ marginTop: "-80px" }}>
-          {countArray.map((el, index) => (
-            <div className="vector">
-              <Vector />
-            </div>
-          ))}
-        </div>
-        <div className="odd" style={{ marginTop: "-76px" }}>
-          {countArray.map((el, index) => (
-            <div className="vector">
-              {index === 4 && state === 2 ? (
-                <div style={{ cursor: "pointer" }}>
-                  <SmartCards />
-                </div>
-              ) : (
-                <Vector />
-              )}
-            </div>
-          ))}
-        </div>
-        <div className="even" style={{ marginTop: "-80px" }}>
-          {countArray.map((el, index) => (
-            <div className="vector">
-              {index === 4 && state === 2 ? (
-                <div style={{ cursor: "pointer" }}>
-                  <RoboBarista />
-                </div>
-              ) : (
-                <Vector />
-              )}
-            </div>
-          ))}
-        </div>
-        <div className="odd" style={{ marginTop: "-76px" }}>
+        <div className="odd">
           {countArray.map((el, index) => (
             <div className="vector">
               {index === 5 && state === 2 ? (
-                <div style={{ cursor: "pointer" }}>
-                  <GidroGel />
+                <div>
+                  <AboutUs media={media} />
+                </div>
+              ) : (
+                <Vector media={media} />
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="even">
+          {countArray.map((el, index) => (
+            <div className="vector">
+              <Vector media={media} />
+            </div>
+          ))}
+        </div>
+        <div className="odd">
+          {countArray.map((el, index) => (
+            <div className="vector">
+              {index === 4 && state === 2 ? (
+                <div>
+                  <SmartCards media={media} />
+                </div>
+              ) : (
+                <Vector media={media} />
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="even">
+          {countArray.map((el, index) => (
+            <div className="vector">
+              {index === 4 && state === 2 ? (
+                <div>
+                  <RoboBarista media={media} />
+                </div>
+              ) : (
+                <Vector media={media} />
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="odd">
+          {countArray.map((el, index) => (
+            <div className="vector">
+              {index === 5 && state === 2 ? (
+                <div>
+                  <GidroGel media={media} />
                 </div>
               ) : index === 4 && state === 2 ? (
-                <div style={{ cursor: "pointer" }}>
-                  <Slot />
+                <div>
+                  <Slot media={media} />
                 </div>
               ) : (
-                <Vector />
+                <Vector media={media} />
               )}
             </div>
           ))}
         </div>
-        <div className="even" style={{ marginTop: "-80px" }}>
+        <div className="even">
+          {countArray.map((el, index) => (
+            <div className="vector">
+              {index === 4 && state === 2 ? (
+                <div>
+                  <Slot media={media} />
+                </div>
+              ) : (
+                <Vector media={media} />
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="odd">
           {countArray.map((el, index) => (
             <div className="vector">
               {index === 4 && state === 2 ? (
                 <div style={{ cursor: "pointer" }}>
-                  <Slot />
+                  <Slot media={media} />
                 </div>
               ) : (
-                <Vector />
+                <Vector media={media} />
               )}
             </div>
           ))}
         </div>
-        <div className="odd" style={{ marginTop: "-76px" }}>
+        <div className="even">
           {countArray.map((el, index) => (
             <div className="vector">
-              {index === 4 && state === 2 ? (
-                <div style={{ cursor: "pointer" }}>
-                  <Slot />
-                </div>
-              ) : (
-                <Vector />
-              )}
+              <Vector media={media} />
             </div>
           ))}
         </div>
-        <div className="even" style={{ marginTop: "-80px" }}>
+        <div className="odd">
           {countArray.map((el, index) => (
             <div className="vector">
-              <Vector />
+              <Vector media={media} />
             </div>
           ))}
         </div>
-        <div className="odd" style={{ marginTop: "-76px" }}>
+        <div className="even">
           {countArray.map((el, index) => (
             <div className="vector">
-              <Vector />
+              <Vector media={media} />
             </div>
           ))}
         </div>
-        <div className="even" style={{ marginTop: "-80px" }}>
+        <div className="odd">
           {countArray.map((el, index) => (
             <div className="vector">
-              <Vector />
+              <Vector media={media} />
             </div>
           ))}
         </div>
-        <div className="odd" style={{ marginTop: "-76px" }}>
+        <div className="even">
           {countArray.map((el, index) => (
             <div className="vector">
-              <Vector />
+              <Vector media={media} />
             </div>
           ))}
         </div>
-        <div className="even" style={{ marginTop: "-80px" }}>
+        <div className="odd">
           {countArray.map((el, index) => (
             <div className="vector">
-              <Vector />
+              <Vector media={media} />
             </div>
           ))}
         </div>
-        <div className="odd" style={{ marginTop: "-76px" }}>
+        <div className="even">
           {countArray.map((el, index) => (
             <div className="vector">
-              <Vector />
+              <Vector media={media} />
             </div>
           ))}
         </div>
-        <div className="even" style={{ marginTop: "-80px" }}>
+        <div className="odd">
           {countArray.map((el, index) => (
             <div className="vector">
-              <Vector />
+              <Vector media={media} />
             </div>
           ))}
         </div>

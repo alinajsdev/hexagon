@@ -17,6 +17,7 @@ body {
 .odd {
   display: flex;
   gap: 100px;
+  margin-top: -76px;
   justify-content: center;
   align-items: center;
 }
@@ -33,3 +34,46 @@ body {
   height: 150.789px;
   transition: all 1s;
 }
+.nfc{
+  position: absolute;
+  left: 40%;
+  right: 45%;
+  bottom: 50%;
+  transition: 1s;
+}
+
+@media (max-width : 600px) {
+  .nfc{
+    position: absolute;
+    left: 17%;
+    right: 20%;
+    bottom: 100%;
+    transition: 1s;
+  }
+  .odd {
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 43px;
+    margin-top: -94px;
+  }
+  .even {
+    margin-left: 263px;
+    margin-top: -93px;
+    gap: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #vector {
+    margin-top: -90px;
+    margin-left: -30px;
+    max-width: 110vw;
+    max-height: 114vh;
+    object-fit: cover;
+    overflow: hidden;
+  }
+}
+
