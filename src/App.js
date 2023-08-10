@@ -6,6 +6,8 @@ import AboutUs from "./AboutUs";
 import Vector from "./vector";
 import Slot from "./Slot";
 import NFC from "./NFC";
+import React from 'react';
+import { motion } from 'framer-motion';
 
 import "./App.css";
 
@@ -30,15 +32,20 @@ function App() {
 
   return (
     <div id={"vector"}>
-      <div
-        className="nfc"
-        style={{
-          top: state === 0 && state === 2 ? "60%" : "50%",
-          display: state === 1 ? "block" : "none",
-        }}
+      <motion.div
+  initial={{ y: '100%', opacity: 0 }}
+  animate={{
+    y: state === 1 ? '0%' : '100%',
+    opacity: state === 1 ? 1 : 0,
+  }}
+  className="nfc"
+  style={{
+    transform: 'translate(-50%, -50%)',
+    display: state === 1 ? 'block' : 'none',
+  }}
       >
         <NFC />
-      </div>
+      </motion.div>
       <div>
         <div className="odd">
           {countArray.map((el, index) => (
@@ -72,9 +79,14 @@ function App() {
           {countArray.map((el, index) => (
             <div className="vector">
               {index === 5 && state === 2 ? (
-                <div>
+                <motion.div
+                initial={{ scale: 0 }} 
+                animate={{ scale: 1 }} 
+                transition={{ duration: 1, ease: "anticipate" }} 
+                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                >
                   <AboutUs media={media} />
-                </div>
+                </motion.div>
               ) : (
                 <Vector media={media} />
               )}
@@ -92,9 +104,14 @@ function App() {
           {countArray.map((el, index) => (
             <div className="vector">
               {index === 4 && state === 2 ? (
-                <div>
+                <motion.div
+                initial={{ scale: 0 }} 
+                animate={{ scale: 1 }} 
+                transition={{ duration: 1, ease: "anticipate" }} 
+                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                >
                   <SmartCards media={media} />
-                </div>
+                </motion.div>
               ) : (
                 <Vector media={media} />
               )}
@@ -105,9 +122,14 @@ function App() {
           {countArray.map((el, index) => (
             <div className="vector">
               {index === 4 && state === 2 ? (
-                <div>
+                <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }} 
+                transition={{ duration: 1, ease: "anticipate" }} 
+                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                >
                   <RoboBarista media={media} />
-                </div>
+                </motion.div>
               ) : (
                 <Vector media={media} />
               )}
@@ -118,13 +140,23 @@ function App() {
           {countArray.map((el, index) => (
             <div className="vector">
               {index === 5 && state === 2 ? (
-                <div>
+                <motion.div
+                initial={{ scale: 0 }} // начальный масштаб блока
+                animate={{ scale: 1 }} // конечный масштаб блока
+                transition={{ duration: 1, ease: "anticipate" }} // начальный масштаб блока
+                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                >
                   <GidroGel media={media} />
-                </div>
+                </motion.div>
               ) : index === 4 && state === 2 ? (
-                <div>
+                <motion.div
+                initial={{ scale: 0 }} // начальный масштаб блока
+                animate={{ scale: 1 }} // конечный масштаб блока
+                transition={{ duration: 1, ease: "anticipate" }} // начальный масштаб блока
+                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                >
                   <Slot media={media} />
-                </div>
+                </motion.div>
               ) : (
                 <Vector media={media} />
               )}
@@ -135,9 +167,14 @@ function App() {
           {countArray.map((el, index) => (
             <div className="vector">
               {index === 4 && state === 2 ? (
-                <div>
+                <motion.div
+                initial={{ scale: 0 }} // начальный масштаб блока
+                animate={{ scale: 1 }} // конечный масштаб блока
+                transition={{ duration: 1, ease: "anticipate" }} // начальный масштаб блока
+                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                >
                   <Slot media={media} />
-                </div>
+                </motion.div>
               ) : (
                 <Vector media={media} />
               )}
@@ -148,9 +185,14 @@ function App() {
           {countArray.map((el, index) => (
             <div className="vector">
               {index === 4 && state === 2 ? (
-                <div style={{ cursor: "pointer" }}>
+                <motion.div
+                initial={{ scale: 0 }} // начальный масштаб блока
+                animate={{ scale: 1 }} // конечный масштаб блока
+                transition={{ duration: 1, ease: "anticipate" }} // начальный масштаб блока
+                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                style={{ cursor: "pointer" }}>
                   <Slot media={media} />
-                </div>
+                </motion.div>
               ) : (
                 <Vector media={media} />
               )}

@@ -37,9 +37,10 @@ body {
 .nfc {
   position: absolute;
   left: 40%;
-  right: 45%;
-  bottom: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
   transition: 1s;
+
 }
 
 @media (max-width: 600px) {
