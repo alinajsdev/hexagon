@@ -86,6 +86,7 @@ function App() {
                 animate={{ scale: 1 }} 
                 transition={{ duration: 1, ease: "anticipate" }} 
                 whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                style={{cursor : "pointer"}}
                 >
                   <AboutUs media={media} />
                 </motion.div>
@@ -111,6 +112,7 @@ function App() {
                 animate={{ scale: 1 }} 
                 transition={{ duration: 1, ease: "anticipate" }} 
                 whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                style={{cursor : "pointer"}}
                 >
                   <SmartCards media={media} />
                 </motion.div>
@@ -129,6 +131,7 @@ function App() {
                 animate={{ scale: 1 }} 
                 transition={{ duration: 1, ease: "anticipate" }} 
                 whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                style={{cursor : "pointer"}}
                 >
                   <RoboBarista media={media} />
                 </motion.div>
@@ -147,6 +150,7 @@ function App() {
                 animate={{ scale: 1 }} // конечный масштаб блока
                 transition={{ duration: 1, ease: "anticipate" }} // начальный масштаб блока
                 whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                style={{cursor : "pointer"}}
                 >
                   <GidroGel media={media} />
                 </motion.div>
@@ -156,6 +160,7 @@ function App() {
                 animate={{ scale: 1 }} // конечный масштаб блока
                 transition={{ duration: 1, ease: "anticipate" }} // начальный масштаб блока
                 whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                style={{cursor : "pointer"}}
                 >
                   <MotionWebLLS media={media} />
                 </motion.div>
@@ -174,6 +179,7 @@ function App() {
                 animate={{ scale: 1 }} // конечный масштаб блока
                 transition={{ duration: 1, ease: "anticipate" }} // начальный масштаб блока
                 whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                style={{cursor : "pointer"}}
                 >
                   <RoboCarWash media={media} />
                 </motion.div>
