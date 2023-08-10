@@ -4,12 +4,14 @@ import SmartCards from "./SmartCards";
 import GidroGel from "./GidroGel";
 import AboutUs from "./AboutUs";
 import Vector from "./vector";
-import Slot from "./Slot";
 import NFC from "./NFC";
 import React from 'react';
 import { motion } from 'framer-motion';
 
 import "./App.css";
+import MotionWebLLS from "./MotionWebLLS";
+import RoboCarWash from "./RoboCarWash";
+import Contacts from "./Contacts";
 
 function App() {
   const [state, setState] = useState(0);
@@ -155,7 +157,7 @@ function App() {
                 transition={{ duration: 1, ease: "anticipate" }} // начальный масштаб блока
                 whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
                 >
-                  <Slot media={media} />
+                  <MotionWebLLS media={media} />
                 </motion.div>
               ) : (
                 <Vector media={media} />
@@ -173,7 +175,7 @@ function App() {
                 transition={{ duration: 1, ease: "anticipate" }} // начальный масштаб блока
                 whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
                 >
-                  <Slot media={media} />
+                  <RoboCarWash media={media} />
                 </motion.div>
               ) : (
                 <Vector media={media} />
@@ -191,7 +193,7 @@ function App() {
                 transition={{ duration: 1, ease: "anticipate" }} // начальный масштаб блока
                 whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
                 style={{ cursor: "pointer" }}>
-                  <Slot media={media} />
+                  <Contacts media={media} />
                 </motion.div>
               ) : (
                 <Vector media={media} />
