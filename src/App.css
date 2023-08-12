@@ -2,12 +2,14 @@
 *::after {
   margin: 0;
   padding: 0;
+  background-color:  #092F53;
 }
 body {
-  background-color: #092f53;
+  background-color:  #092F53;
 }
 
 #vector {
+  background-color:  #092F53;
   margin-top: -90px;
   max-width: 100vw;
   max-height: 111vh;
@@ -16,27 +18,25 @@ body {
 }
 .odd {
   display: flex;
-  gap: 100px;
-  margin-top: -76px;
+  gap: 142px;
+  margin-top: -46px;
   justify-content: center;
   align-items: center;
 }
 .even {
-  margin-left: 294px;
-  margin-top: -80px;
-  gap: 100px;
+  margin-left: 422px;
+  margin-top: -46px;
+  gap: 142px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .vector {
-  width: 273.666px;
   height: 150.789px;
-  transition: all 1s;
 }
 .nfc {
   position: absolute;
-  left: 40%;
+  left: 42%;
   top: 40%;
   transform: translate(-50%, -50%);
   transition: 1s;
@@ -48,7 +48,7 @@ body {
     position: absolute;
     left: 17%;
     right: 20%;
-    bottom: 100%;
+    bottom: 50%;
     transition: 1s;
   }
   .odd {
@@ -57,11 +57,11 @@ body {
     justify-content: center;
     align-items: center;
     margin-left: 43px;
-    margin-top: -94px;
+    margin-top: -95px;
   }
   .even {
     margin-left: 263px;
-    margin-top: -93px;
+    margin-top: -95px;
     gap: 70px;
     display: flex;
     justify-content: center;
