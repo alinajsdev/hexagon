@@ -6,7 +6,8 @@ import AboutUs from "./AboutUs";
 import Vector from "./vector";
 import NFC from "./NFC";
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+
 
 import "./App.css";
 import MotionWebLLS from "./MotionWebLLS";
@@ -39,21 +40,34 @@ function App() {
 
 
     <div id={"vector"}>
+<AnimatePresence>
+  {state === 1 && (
+    <motion.div
+      initial={{ y: '100%', opacity: 0 }}
+      animate={{
+        y: '0%',
+        opacity: 1,
+        transition: { duration: 0.5, ease: 'easeInOut' }, 
+      }}
+      exit={{
+        y: '100%',
+        opacity: 0,
+        transition: { duration: 0.5, ease: 'easeInOut' },
+      }}
+      className="nfc"
+      style={{
+        position: 'fixed',
+        top: '38%',
+        left: '40%',
+        right:"43%",
+        transform: 'translate(-50%, -50%)',
+      }}
+    >
+      <NFC />
+    </motion.div>
+  )}
+</AnimatePresence>
 
-      <motion.div
-  initial={{ y: '100%', opacity: 0 }}
-  animate={{
-    y: state === 1 ? '0%' : '100%',
-    opacity: state === 1 ? 1 : 0,
-  }}
-  className="nfc"
-  style={{
-    transform: 'translate(-50%, -50%)',
-    display: state === 1 ? 'block' : 'none',
-  }}
-      >
-        <NFC />
-      </motion.div>
       <div>
       
      
