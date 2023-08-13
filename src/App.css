@@ -35,18 +35,29 @@ body {
   height: 150.789px;
 }
 .nfc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  left: 42%;
+  left: 41%;
   top: 40%;
   transform: translate(-50%, -50%);
   transition: 1s;
-
+}
+@media (max-width: 900px) {
+  .nfc {
+    position: absolute;
+    left: 25%;
+    right: 20%;
+    bottom: 50%;
+    transition: 1s;
+  }
 }
 
 @media (max-width: 600px) {
   .nfc {
     position: absolute;
-    left: 17%;
+    left: 15%;
     right: 20%;
     bottom: 50%;
     transition: 1s;
