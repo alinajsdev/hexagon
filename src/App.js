@@ -8,13 +8,25 @@ import { motion, AnimatePresence } from "framer-motion";
 import MotionWebLLS from "./assets/MotionWebLLS";
 import RoboCarWash from "./assets/RoboCarWash";
 import Contacts from "./assets/Contacts";
-import { Box } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Slide,
+  Text,
+  useDisclosure,
+  Heading,
+} from "@chakra-ui/react";
 import VectorUI from "./UI/Vector";
 import Sots from "./UI/Sots";
 import "./App.css";
+import Exit from "./assets/Exit";
+import About from "./components/About";
+
 function App() {
   const [state, setState] = useState(0);
   const [media, setMedia] = useState(false);
+  const { isOpen, onToggle } = useDisclosure();
+  const [aboutModal, setAboutModal] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setState(1);
@@ -46,7 +58,6 @@ function App() {
               transition: { duration: 0.5, ease: "easeInOut" },
             }}
             className="nfc"
-         
           >
             <NFC />
             <Box></Box>
@@ -66,10 +77,16 @@ function App() {
         <Sots
           className={"odd"}
           idx={6}
-          sot={<AboutUs media={media} />}
+          sot={
+            <Box onClick={onToggle}>
+              <AboutUs media={media} />
+            </Box>
+          }
           media={media}
           state={state}
         />
+
+        <About onToggle={onToggle} isOpen={isOpen} />
 
         <VectorUI media={media} className={"even"} />
         <Sots
