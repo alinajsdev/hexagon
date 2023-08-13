@@ -4,8 +4,8 @@ const RoboCarWash = ({ media }) => {
   return (
     <>
       <svg
-        width={media ? "150" : "280"}
-        height={media ? "110" : "240"}
+        width={media ? '150' : '200'} 
+        height={media ? "110" : "195"}
         viewBox="0 0 143 112"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

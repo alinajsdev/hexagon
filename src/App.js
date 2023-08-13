@@ -55,6 +55,9 @@ function App() {
         <NFC />
       </motion.div>
       <div>
+      
+     
+
         <div className="odd">
           {countArray.map((el, index) => (
             <div className="vector">
@@ -69,8 +72,6 @@ function App() {
             </div>
           ))}
         </div>
-
-
      
   
         <Box display={{md:"none", base:"block"}}>
@@ -88,28 +89,12 @@ function App() {
             </div>
           ))}
         </div>
-        <div className="odd">
-          {countArray.map((el, index) => (
-            <div className="vector">
-              <Vector media={media} />
-            </div>
-          ))}
-        </div>
         </Box>
-   <Box display={{md:"none", base:"block"}}>
- 
-        <div className="even">
-          {countArray.map((el, index) => (
-            <div className="vector">
-              <Vector media={media} />
-            </div>
-          ))}
-        </div>
-   </Box>
+
         <div className="odd">
-          {countArray.map((el, index) => (
+        {countArray.map((el, index) => (
                <div className="vector">
-              {index === 5 && state === 2 ? (
+              { index === 5 && state === 2 ? (
                 <motion.div
                 initial={{ scale: 0 }} // начальный масштаб блока
                 animate={{ scale: 1 }} // конечный масштаб блока
@@ -122,7 +107,24 @@ function App() {
                   </Link>
                  
                 </motion.div>
-              ) : index === 4 && state === 2 ? (
+              ) : (
+                <Vector media={media} />
+              )}
+            </div>
+          ))}
+        </div>
+ 
+        <div className="even">
+          {countArray.map((el, index) => (
+            <div className="vector">
+              <Vector media={media} />
+            </div>
+          ))}
+        </div>
+        <div className="odd">
+          {countArray.map((el, index) => (
+               <div className="vector">
+              { index === 4 && state === 2 ? (
                 <motion.div
                 initial={{ scale: 0 }} // начальный масштаб блока
                 animate={{ scale: 1 }} // конечный масштаб блока
@@ -200,20 +202,7 @@ function App() {
         <div className="odd">
           {countArray.map((el, index) => (
             <div className="vector">
-              {index === 5 && state === 2 ? (
-                <motion.div
-                initial={{ scale: 0 }} // начальный масштаб блока
-                animate={{ scale: 1 }} // конечный масштаб блока
-                transition={{ duration: 1, ease: "anticipate" }} // начальный масштаб блока
-                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
-                style={{cursor : "pointer"}}
-                >
-                  <Link to={'/contacts'}>
-                    <Contacts media={media} />
-                  </Link>
-                
-                </motion.div>
-              ) : index === 4 && state === 2 ? (
+              { index === 4 && state === 2 ? (
                 <motion.div
                 initial={{ scale: 0 }} // начальный масштаб блока
                 animate={{ scale: 1 }} // конечный масштаб блока
@@ -237,9 +226,24 @@ function App() {
           ))}
         </div>
         <div className="odd">
-          {countArray.map((el, index) => (
+        {countArray.map((el, index) => (
             <div className="vector">
-              <Vector media={media} />
+              {index === 5 && state === 2 ? (
+                <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }} 
+                transition={{ duration: 1, ease: "anticipate" }} 
+                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                style={{cursor : "pointer"}}
+                >
+                  <Link to={'/contacts'}>
+                   <Contacts media={media} />
+                  </Link>
+                 
+                </motion.div>
+              ) : (
+                <Vector media={media} />
+              )}
             </div>
           ))}
         </div>
