@@ -7,26 +7,21 @@ import NFC from "./assets/NFC";
 import { motion, AnimatePresence } from "framer-motion";
 import MotionWebLLS from "./assets/MotionWebLLS";
 import RoboCarWash from "./assets/RoboCarWash";
-import Contacts from "./assets/Contacts";
+
 import {
   Box,
-  Button,
-  Slide,
-  Text,
   useDisclosure,
-  Heading,
 } from "@chakra-ui/react";
 import VectorUI from "./UI/Vector";
 import Sots from "./UI/Sots";
 import "./App.css";
-import Exit from "./assets/Exit";
 import About from "./components/About";
+import ContactsModal from "./components/Contacts";
 
 function App() {
   const [state, setState] = useState(0);
   const [media, setMedia] = useState(false);
   const { isOpen, onToggle } = useDisclosure();
-  const [aboutModal, setAboutModal] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setState(1);
@@ -131,14 +126,8 @@ function App() {
           link={""}
         />
         <VectorUI media={media} className={"even"} />
-        <Sots
-          className={"odd"}
-          idx={6}
-          sot={<Contacts media={media} />}
-          media={media}
-          state={state}
-          link={""}
-        />
+   <ContactsModal media={media} state={state} />
+       
         <VectorUI media={media} className={"even"} />
         <VectorUI media={media} className={"odd"} />
         <VectorUI media={media} className={"even"} />
