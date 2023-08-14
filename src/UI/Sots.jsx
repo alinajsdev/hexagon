@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 import Vector from '../assets/vector'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
+
 
 const Sots = ({state, sot, media, className, idx,link}) => {
     const count = 10;
@@ -18,9 +19,9 @@ const Sots = ({state, sot, media, className, idx,link}) => {
                   whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
                   style={{ cursor: "pointer" }}
                 >
-                    <Link href={link}>
+                    <a href={link} target='_blank'>
                      {sot}
-                    </Link>
+                    </a>
                  
                 </motion.div>
               ) : (

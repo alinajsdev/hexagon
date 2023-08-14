@@ -7,10 +7,7 @@ import NFC from "./assets/NFC";
 import MotionWebLLS from "./assets/MotionWebLLS";
 import RoboCarWash from "./assets/RoboCarWash";
 
-import {
-  Box,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Box, useDisclosure } from "@chakra-ui/react";
 import VectorUI from "./UI/Vector";
 import Sots from "./UI/Sots";
 import "./App.css";
@@ -37,24 +34,24 @@ function App() {
 
   return (
     <div id={"vector"}>
-        {state === 1 && (
-          <Box
-            className=" main-animation"
-            position="fixed"
-            top="0"
-            left="0"
-            w="100%"
-            h="100vh"
-            zIndex="100"
-            display='flex'
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Box className="main-animation__text">
-              <NFC />
-            </Box>
+      {state === 1 && (
+        <Box
+          className=" main-animation"
+          position="fixed"
+          top="0"
+          left="0"
+          w="100%"
+          h="100vh"
+          zIndex="100"
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Box className="main-animation__text">
+            <NFC />
           </Box>
-        )}
+        </Box>
+      )}
 
       <div>
         <VectorUI media={media} className={"odd"} />
@@ -86,7 +83,9 @@ function App() {
           sot={<RoboBarista media={media} />}
           media={media}
           state={state}
-          link={""}
+          link={
+            "https://www.figma.com/proto/WJZQpGaD5B9mSU5OkQeEnh/COFFEE-ROBOT?page-id=0%3A1&type=design&node-id=50-37&t=WSxJfjMt2QBJSpcd-0&scaling=contain"
+          }
         />
         <Sots
           className={"even"}
@@ -94,7 +93,7 @@ function App() {
           sot={<SmartCards media={media} />}
           media={media}
           state={state}
-          link={""}
+          link={"https://nfc-gcc.com/nfc_comporessed.pdf"}
         />
         <Sots
           className={"odd"}
@@ -102,7 +101,9 @@ function App() {
           sot={<GidroGel media={media} />}
           media={media}
           state={state}
-          link={""}
+          link={
+            " https://www.figma.com/proto/rNPbdmrIfQf22zlB50XviN/Untitled?page-id=0%3A1&type=design&node-id=17-2&t=VfFGvsllO8e5I56y-0&scaling=min-zoom"
+          }
         />
 
         <Sots
@@ -111,7 +112,7 @@ function App() {
           sot={<RoboCarWash media={media} />}
           media={media}
           state={state}
-          link={""}
+          link={"https://robo-car-wash.com"}
         />
         <Sots
           className={"odd"}
@@ -119,11 +120,11 @@ function App() {
           sot={<MotionWebLLS media={media} />}
           media={media}
           state={state}
-          link={""}
+          link={"https://motionweb.dev"}
         />
         <VectorUI media={media} className={"even"} />
-   <ContactsModal media={media} state={state} />
-       
+        <ContactsModal media={media} state={state} />
+
         <VectorUI media={media} className={"even"} />
         <VectorUI media={media} className={"odd"} />
         <VectorUI media={media} className={"even"} />
