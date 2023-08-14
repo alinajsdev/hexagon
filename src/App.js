@@ -93,7 +93,7 @@ function App() {
           sot={<SmartCards media={media} />}
           media={media}
           state={state}
-          link={"https://nfc-gcc.com/nfc_comporessed.pdf"}
+          link={"https://nfc-gcc.vercel.app/nfc_comporessed.pdf"}
         />
         <Sots
           className={"odd"}
