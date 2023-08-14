@@ -8,10 +8,12 @@ const About = ({ onToggle, isOpen }) => {
       <Slide direction="bottom" in={isOpen} style={{ zIndex: 10 }}>
         <Box
           pos={"relative"}
-          maxW={{ md: "800px", base: "98%" }}
-          ml={{ lg: "23%", sm: "1%", base: "7px" }}
+          maxW={{ md: "800px", base: "95%" }}
+          maxH={'98vh'}
+          overflow={'scroll'}
+          ml={{ lg: "23%", sm: "2.5%", base: "10px" }}
           mb={{ lg: "50px", md: "160px", base: "0" }}
-          p={{ md: "50px", base: "0px" }}
+          p={{ md: "50px", base: "20px" }}
           color="#E0E0E0"
           mt="4"
           bg="#1C1C1C"
@@ -23,8 +25,8 @@ const About = ({ onToggle, isOpen }) => {
           <Box
             onClick={() => onToggle()}
             pos={"absolute"}
-            top={{ md: "30px", base: "10px" }}
-            right={{ md: "30px", base: "10px" }}
+            top={{ md: "30px", base: "20px" }}
+            right={{ md: "30px", base: "20px" }}
             cursor={"pointer"}
           >
             <Exit />
@@ -34,7 +36,7 @@ const About = ({ onToggle, isOpen }) => {
             color={"#fff"}
             fontFamily={"Poopins, sans-serif"}
             textAlign={"center"}
-            p={{ md: "0 0 17px 0", base: "5px 0  0 0 " }}
+            p={{ md: "0 0 17px 0", base: "5px 0  10px 0 " }}
           >
             ABOUT US
           </Heading>
