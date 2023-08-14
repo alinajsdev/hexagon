@@ -4,7 +4,6 @@ import SmartCards from "./assets/SmartCards";
 import GidroGel from "./assets/GidroGel";
 import AboutUs from "./assets/AboutUs";
 import NFC from "./assets/NFC";
-import { motion, AnimatePresence } from "framer-motion";
 import MotionWebLLS from "./assets/MotionWebLLS";
 import RoboCarWash from "./assets/RoboCarWash";
 
@@ -28,7 +27,7 @@ function App() {
     }, 1000);
     setTimeout(() => {
       setState(2);
-    }, 5000);
+    }, 2900);
 
     if (window.innerWidth < 600) {
       return setMedia(!media);
@@ -38,27 +37,24 @@ function App() {
 
   return (
     <div id={"vector"}>
-      <AnimatePresence>
         {state === 1 && (
-          <motion.div
-            initial={{ y: "100%", opacity: 0 }}
-            animate={{
-              y: "0%",
-              opacity: 1,
-              transition: { duration: 0.5, ease: "easeInOut" },
-            }}
-            exit={{
-              y: "100%",
-              opacity: 0,
-              transition: { duration: 0.5, ease: "easeInOut" },
-            }}
-            className="nfc"
+          <Box
+            className=" main-animation"
+            position="fixed"
+            top="0"
+            left="0"
+            w="100%"
+            h="100vh"
+            zIndex="100"
+            display='flex'
+            justifyContent="center"
+            alignItems="center"
           >
-            <NFC />
-            <Box></Box>
-          </motion.div>
+            <Box className="main-animation__text">
+              <NFC />
+            </Box>
+          </Box>
         )}
-      </AnimatePresence>
 
       <div>
         <VectorUI media={media} className={"odd"} />

@@ -36,16 +36,44 @@ body {
 .vector {
   height: 150.789px;
 }
-.nfc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 41%;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  transition: 1s;
+
+.main-animation {
+  animation: mainHome 3s ease;
 }
+.main-animation__text{
+  animation: mainHomeText 3s ease;
+}
+@keyframes mainHome {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    display: none;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes mainHomeText {
+  0% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  60% {
+    opacity: 1;
+    display: none;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+
 @media (max-width: 900px) {
   .nfc {
     position: absolute;
