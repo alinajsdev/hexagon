@@ -27,7 +27,7 @@ function App() {
     }, 1000);
     setTimeout(() => {
       setState(2);
-    }, 2900);
+    }, 3000);
 
     if (window.innerWidth < 600) {
       return setMedia(!media);

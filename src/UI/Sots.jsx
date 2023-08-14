@@ -14,7 +14,7 @@ const Sots = ({state, sot, media, className, idx,link}) => {
                 <motion.div
                   initial={{ scale: 0 }} // начальный масштаб блока
                   animate={{ scale: 1 }} // конечный масштаб блока
-                  transition={{ duration: 1, ease: "anticipate" }} // начальный масштаб блока
+                  transition={{ duration: 1.5, ease: "anticipate" }} // начальный масштаб блока
                   whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
                   style={{ cursor: "pointer" }}
                 >

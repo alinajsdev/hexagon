@@ -10,7 +10,7 @@ const About = ({ onToggle, isOpen }) => {
           pos={"relative"}
           maxW={{ md: "800px", base: "95%" }}
           maxH={'98vh'}
-          overflow={'scroll'}
+          overflow={{md:"auto", base:"scroll"}}
           ml={{ lg: "23%", sm: "2.5%", base: "10px" }}
           mb={{ lg: "50px", md: "160px", base: "0" }}
           p={{ md: "50px", base: "20px" }}
