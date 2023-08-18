@@ -19,7 +19,7 @@ const Sots = ({state, sot, media, className, idx,link}) => {
                   whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
                   style={{ cursor: "pointer" }}
                 >
-                    <a href={link} target='_blank'>
+                    <a href={link} >
                      {sot}
                     </a>
                  
