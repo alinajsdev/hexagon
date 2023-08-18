@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 import Vector from '../assets/vector'
-import { NavLink } from 'react-router-dom'
-
 
 const Sots = ({state, sot, media, className, idx,link}) => {
     const count = 10;
